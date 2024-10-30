@@ -14,6 +14,7 @@ jobs:
         run: echo "IaC Scanning using Checkov"
         
   cont-deployment:
+    needs: [cont-integration]
     runs-on: ubuntu-latest #github-runner
     steps:
       - name: Deploy Staging
